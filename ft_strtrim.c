@@ -11,28 +11,26 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+static int char_ocurr(char c, const char *set)
+{
+		int j;
+		j=0;
+		while (set[j])
+		{
+			if (c == set[j])
+			return 1;
+			j++;
+		}
+		return 0;
+}
 static int	first_po(const char *s1, const char *set)
 {
 	int	i;
-	int	j;
-	int	in_set;
 
 	i = 0;
 	while (s1[i])
 	{
-		j = 0;
-		in_set = 0;
-		while (set[j])
-		{
-			if (s1[i] == set[j])
-			{
-				in_set = 1;
-				break ;
-			}
-			j++;
-		}
-		if (!in_set)
+		if (!char_ocurr(s1[i],set))
 			return (i);
 		i++;
 	}
@@ -42,24 +40,11 @@ static int	first_po(const char *s1, const char *set)
 static int	last_po(const char *s1, const char *set)
 {
 	int	i;
-	int	j;
-	int	in_set;
 
 	i = ft_strlen(s1) - 1;
 	while (i > 0)
 	{
-		j = 0;
-		in_set = 0;
-		while (set[j])
-		{
-			if (s1[i] == set[j])
-			{
-				in_set = 1;
-				break ;
-			}
-			j++;
-		}
-		if (!in_set)
+		if (!char_ocurr(s1[i],set))
 			return (i);
 		i--;
 	}
@@ -73,12 +58,14 @@ char	*ft_strtrim(const char *s1, const char *set)
 	char	*m;
 	int		i;
 
-	if (!s1 || !set)
+	if (!s1)
 		return (NULL);
+	if(!set)
+		return ft_strdup(s1);
 	first_pos = first_po(s1, set);
 	last_pos = last_po(s1, set);
 	if (last_pos < first_pos)
-		return (NULL);
+		return ft_strdup("");
 	m = malloc(last_pos - first_pos + 2);
 	if (!m)
 		return (NULL);

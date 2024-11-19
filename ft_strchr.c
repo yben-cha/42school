@@ -1,26 +1,15 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: yben-cha <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/17 10:15:19 by yben-cha          #+#    #+#             */
-/*   Updated: 2024/11/17 11:13:36 by yben-cha         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include "libft.h"
-
-char	*ft_strchr(const char *s, int i)
+#include"libft.h"
+char *ft_strchr(const char *str, int search_str)
 {
-	while (*s)
+
+	if(!(search_str %128))
+		return (char *)(str + ft_strlen(str));
+	/*i know i can just cast to char then ='\0'*/
+	while(*str)
 	{
-		if (*s == (unsigned char )i)
-			return ((char *)s);
-		s++;
+		if(*(str++)==(char)search_str)
+			return (char *)(--str);
 	}
-	if ((unsigned char )i == '\0')
-		return ((char *)s);
-	return (0);
+	return NULL;
 }
+

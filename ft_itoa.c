@@ -1,61 +1,52 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: yben-cha <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 13:57:32 by yben-cha          #+#    #+#             */
-/*   Updated: 2024/11/18 14:19:40 by yben-cha         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include "libft.h"
-
-static int	ft_abs(int nbr)
+#include"libft.h"
+static int	count_digit(int n)
 {
-	if (nbr < 0)
-		return (-1 * nbr);
-	return (nbr);
-}
+	int	digit;
 
-static void	ft_strrev(char *str)
-{
-	size_t	length;
-	size_t	i;
-	char	tmp;
-
-	length = ft_strlen(str);
-	i = 0;
-	while (i < length / 2)
+	digit=0;
+	if(!n)
+		return 1;
+	if(n < 0)
+		digit++;
+	while(n)
 	{
-		tmp = str[i];
-		str[i] = str[length - i - 1];
-		str[length - i - 1] = tmp;
-		i++;
+		digit++;
+		n/=10;
 	}
+	return digit;
 }
-
-char	*ft_itoa(int n)
+char *ft_itoa(int n)
 {
-	char	*str;
-	int		is_neg;
-	size_t	length;
+	char	*re;
+	int	i;
+	unsigned int	nb;
 
-	is_neg = (n < 0);
-	str = ft_calloc(11 + is_neg, sizeof(*str));
-	if (!str)
-		return (NULL);
-	if (n == 0)
-		str[0] = '0';
-	length = 0;
-	while (n != 0)
+	i=count_digit(n);
+	re=malloc((i+1) * sizeof(char));
+	if(!re)
+		return NULL;
+	nb=n;
+	if(n < 0)
 	{
-		str[length++] = '0' + ft_abs(n % 10);
-		n = (n / 10);
+		re[0]='-';
+		nb=-n;
 	}
-	if (is_neg)
-		str[length] = '-';
-	ft_strrev(str);
-	return (str);
+	re[i--]='\0';
+	if(0==n)
+		re[i]='0';
+	while(nb)
+	{
+		re[i--]=(nb % 10) + '0';
+		nb/=10;
+	}
+	return re;
 }
+/* prevoius mistake if 0 return "0" wrong cause its  string litral */
+/*#include<stdio.h>
+int	main(void)
+{
+	printf("%s \n",ft_itoa(123456));
+	printf("%s \n",ft_itoa(-123456));
+	printf("%s \n",ft_itoa(0));
+	return 0;
+}*/
