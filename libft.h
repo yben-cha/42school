@@ -6,7 +6,7 @@
 /*   By: yben-cha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 00:14:05 by yben-cha          #+#    #+#             */
-/*   Updated: 2024/11/17 13:06:44 by yben-cha         ###   ########.fr       */
+/*   Updated: 2024/11/20 19:34:01 by yben-cha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,12 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# define SIZE_MAX 18446744073709551615UL
 
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }					t_list;
-
-typedef struct s_split_next
-{
-	size_t			start;
-	size_t			length;
-}					t_split_next;
 
 int					ft_atoi(const char *str);
 

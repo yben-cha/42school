@@ -6,23 +6,26 @@
 /*   By: yben-cha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 21:08:55 by yben-cha          #+#    #+#             */
-/*   Updated: 2024/11/17 14:14:32 by yben-cha         ###   ########.fr       */
+/*   Updated: 2024/11/20 19:23:45 by yben-cha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-static int char_ocurr(char c, const char *set)
+
+static int	char_ocurr(char c, const char *set)
 {
-		int j;
-		j=0;
-		while (set[j])
-		{
-			if (c == set[j])
-			return 1;
-			j++;
-		}
-		return 0;
+	int	j;
+
+	j = 0;
+	while (set[j])
+	{
+		if (c == set[j])
+			return (1);
+		j++;
+	}
+	return (0);
 }
+
 static int	first_po(const char *s1, const char *set)
 {
 	int	i;
@@ -30,7 +33,7 @@ static int	first_po(const char *s1, const char *set)
 	i = 0;
 	while (s1[i])
 	{
-		if (!char_ocurr(s1[i],set))
+		if (!char_ocurr(s1[i], set))
 			return (i);
 		i++;
 	}
@@ -44,7 +47,7 @@ static int	last_po(const char *s1, const char *set)
 	i = ft_strlen(s1) - 1;
 	while (i > 0)
 	{
-		if (!char_ocurr(s1[i],set))
+		if (!char_ocurr(s1[i], set))
 			return (i);
 		i--;
 	}
@@ -60,12 +63,12 @@ char	*ft_strtrim(const char *s1, const char *set)
 
 	if (!s1)
 		return (NULL);
-	if(!set)
-		return ft_strdup(s1);
+	if (!set)
+		return (ft_strdup(s1));
 	first_pos = first_po(s1, set);
 	last_pos = last_po(s1, set);
 	if (last_pos < first_pos)
-		return ft_strdup("");
+		return (ft_strdup(""));
 	m = malloc(last_pos - first_pos + 2);
 	if (!m)
 		return (NULL);

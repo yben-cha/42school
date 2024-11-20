@@ -6,7 +6,7 @@
 /*   By: yben-cha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 00:54:41 by yben-cha          #+#    #+#             */
-/*   Updated: 2024/11/17 11:30:56 by yben-cha         ###   ########.fr       */
+/*   Updated: 2024/11/20 19:34:58 by yben-cha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t nitems, size_t size)
 {
 	void	*p;
 
-	if (nitems != 0 && size > SIZE_MAX / nitems)
+	if (nitems != 0 && size > 18446744073709551615 / nitems)
 		return (NULL);
 	p = malloc(nitems * size);
 	if (p == NULL)
