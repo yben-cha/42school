@@ -1,6 +1,6 @@
 # libft - My First Project at School 42
 
-This project is my first assignment at School 42, where I recreated several functions from the standard C library (`libc`) from scratch. The goal was to deepen my understanding of C programming and computer science concepts like memory management, pointers, static/dynamic libraries, and more. Below is a summary of what I learned and key concepts that anyone working on this project should grasp.
+This project is my first assignment at **School 42**, where I recreated several functions from the standard C library (`libc`) from scratch. The goal was to deepen my understanding of C programming and computer science concepts like memory management, pointers, static/dynamic libraries, and more. Below is a summary of what I learned and key concepts that anyone working on this project should grasp.
 
 ## Table of Contents
 1. [Makefile & Compilation Steps](#makefile--compilation-steps)
@@ -10,6 +10,7 @@ This project is my first assignment at School 42, where I recreated several func
 5. [Pointers: Usage and Meaning](#pointers-usage-and-meaning)
 6. [Memory Allocation & Management](#memory-allocation--management)
 7. [Linked Lists & Basic Data Structures](#linked-lists--basic-data-structures)
+8. [File Handling](#file-handling)
 
 ---
 
@@ -24,8 +25,6 @@ A **Makefile** is a tool used to automate the process of building and compiling 
 
 #### Resources:
 - [GNU Make Manual](https://www.gnu.org/software/make/manual/make.html)
-
----
 
 ## Static vs Dynamic Libraries
 
@@ -44,8 +43,6 @@ This project required creating both **static** and **dynamic libraries**. The ma
 #### Resources:
 - [Static and Dynamic Libraries](https://www.tldp.org/HOWTO/Program-Library-HOWTO/static-and-shared-libraries.html)
 
----
-
 ## String Literals vs Array of Strings
 
 Understanding the difference between **string literals** and an **array of strings** is crucial to avoid **segmentation faults**.
@@ -58,8 +55,6 @@ Understanding the difference between **string literals** and an **array of strin
 
 #### Resources:
 - [String Literals in C](https://www.geeksforgeeks.org/string-literal-in-c/)
-
----
 
 ## Keywords: `static`, `extern`, `const`
 
@@ -75,8 +70,6 @@ Understanding the difference between **string literals** and an **array of strin
 #### Resources:
 - [C Keywords](https://www.tutorialspoint.com/cprogramming/c_keywords.htm)
 
----
-
 ## Pointers: Usage and Meaning
 
 Pointers are variables that store memory addresses. Understanding pointers is essential in C programming for efficient memory use and manipulation.
@@ -88,8 +81,6 @@ Pointers are variables that store memory addresses. Understanding pointers is es
 
 #### Resources:
 - [C Pointers Tutorial](https://www.learn-c.org/en/Pointers_and_Arrays)
-
----
 
 ## Memory Allocation & Management
 
@@ -103,8 +94,6 @@ Memory management is crucial to avoid memory leaks and segmentation faults. I wo
 #### Resources:
 - [Dynamic Memory Allocation in C](https://www.geeksforgeeks.org/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/)
 
----
-
 ## Linked Lists & Basic Data Structures
 
 During the project, I implemented a basic **linked list**. This data structure allows efficient insertion and deletion of elements without needing contiguous memory locations.
@@ -116,11 +105,26 @@ During the project, I implemented a basic **linked list**. This data structure a
 #### Resources:
 - [Linked Lists in C](https://www.geeksforgeeks.org/data-structures/linked-list/)
 
+## File Handling
+
+In this project, I also worked with **file handling** in C, which is a fundamental aspect of interacting with external files.
+
+### Key Concepts:
+- **Opening files**: Using functions like `open()`, `fopen()` to access files.
+- **Reading/Writing to files**: Using `read()`, `write()`, or `fputs()` to interact with file content.
+- **Closing files**: Using `close()` or `fclose()` to properly close a file after use.
+- **Error handling**: Checking the return values from file handling functions to ensure no errors occur.
+
+Handling files correctly helps avoid issues like memory leaks or unclosed file descriptors, which could lead to system resource exhaustion.
+
+#### Resources:
+- [File Handling in C](https://www.tutorialspoint.com/cprogramming/c_file_io.htm)
+
 ---
 
 ## Conclusion
 
-The **libft** project at School 42 has been an excellent opportunity to dive deep into low-level programming concepts in C. By recreating common `libc` functions from scratch, I gained valuable insights into memory management, pointers, libraries, and more. These fundamental skills are essential for any aspiring programmer.
+The **libft** project at School 42 has been an excellent opportunity to dive deep into low-level programming concepts in C. By recreating common `libc` functions from scratch, I gained valuable insights into memory management, pointers, libraries, file handling, and more. These fundamental skills are essential for any aspiring programmer.
 
 ---
 
@@ -128,5 +132,5 @@ The **libft** project at School 42 has been an excellent opportunity to dive dee
 
 1. Clone this repository:  
 ```bash
-git clone https://github.com/yben-cha/libft.git
+git clone https://github.com/your-username/libft.git
 cd libft
