@@ -24,7 +24,7 @@ A **Makefile** is a tool used to automate the process of building and compiling 
 - **Dependencies**: Manage file relationships and ensure only modified files are recompiled.
 
 #### Resources:
-- [ C Programming: Makefiles(https://www.youtube.com/watch?v=GExnnTaBELk)
+- [ C Programming: Makefile](https://www.youtube.com/watch?v=GExnnTaBELk)
 
 ## Static vs Dynamic Libraries
 
