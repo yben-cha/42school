@@ -24,7 +24,7 @@ A **Makefile** is a tool used to automate the process of building and compiling 
 - **Dependencies**: Manage file relationships and ensure only modified files are recompiled.
 
 #### Resources:
-- [GNU Make Manual](https://www.gnu.org/software/make/manual/make.html)
+- [ C Programming: Makefiles(https://www.youtube.com/watch?v=GExnnTaBELk)
 
 ## Static vs Dynamic Libraries
 
@@ -40,8 +40,6 @@ This project required creating both **static** and **dynamic libraries**. The ma
 - Smaller executable size.
 - Requires the `.so` (shared object) file to be present at runtime.
 
-#### Resources:
-- [Static and Dynamic Libraries](https://www.tldp.org/HOWTO/Program-Library-HOWTO/static-and-shared-libraries.html)
 
 ## String Literals vs Array of Strings
 
@@ -54,7 +52,7 @@ Understanding the difference between **string literals** and an **array of strin
 - Modifying string literals can result in undefined behavior.
 
 #### Resources:
-- [String Literals in C](https://www.geeksforgeeks.org/string-literal-in-c/)
+- [String Literals in C]([https://www.geeksforgeeks.org/string-literal-in-c/](https://www.youtube.com/watch?v=Qp3WatLL_Hc))
 
 ## Keywords: `static`, `extern`, `const`
 
@@ -68,7 +66,7 @@ Understanding the difference between **string literals** and an **array of strin
 - Defines a constant value that cannot be modified after initialization.
 
 #### Resources:
-- [C Keywords](https://www.tutorialspoint.com/cprogramming/c_keywords.htm)
+- [C Keywords](https://www.youtube.com/watch?v=3E-r4GfvWOI)
 
 ## Pointers: Usage and Meaning
 
@@ -80,7 +78,7 @@ Pointers are variables that store memory addresses. Understanding pointers is es
 - **Pointer Arithmetic**: Manipulating memory addresses directly.
 
 #### Resources:
-- [C Pointers Tutorial](https://www.learn-c.org/en/Pointers_and_Arrays)
+- [C Pointers Tutorial](https://www.youtube.com/watch?v=zuegQmMdy8M)
 
 ## Memory Allocation & Management
 
@@ -92,7 +90,7 @@ Memory management is crucial to avoid memory leaks and segmentation faults. I wo
 - **Segmentation Fault**: Occurs when accessing memory incorrectly (e.g., accessing freed memory).
 
 #### Resources:
-- [Dynamic Memory Allocation in C](https://www.geeksforgeeks.org/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/)
+- [Dynamic Memory Allocation in C](https://www.youtube.com/watch?v=_8-ht2AKyH4)
 
 ## Linked Lists & Basic Data Structures
 
@@ -103,7 +101,7 @@ During the project, I implemented a basic **linked list**. This data structure a
 - **Insertion/Deletion**: Inserting or deleting elements in the list involves manipulating pointers.
 
 #### Resources:
-- [Linked Lists in C](https://www.geeksforgeeks.org/data-structures/linked-list/)
+- [Linked Lists in C](https://www.youtube.com/watch?v=Hj_rA0dhr2I&t=69s)
 
 ## File Handling
 
@@ -118,7 +116,7 @@ In this project, I also worked with **file handling** in C, which is a fundament
 Handling files correctly helps avoid issues like memory leaks or unclosed file descriptors, which could lead to system resource exhaustion.
 
 #### Resources:
-- [File Handling in C](https://www.tutorialspoint.com/cprogramming/c_file_io.htm)
+- [File Handling in C](https://www.youtube.com/watch?v=scXWLP8uhDU)
 
 ---
 
@@ -132,5 +130,5 @@ The **libft** project at School 42 has been an excellent opportunity to dive dee
 
 1. Clone this repository:  
 ```bash
-git clone https://github.com/your-username/libft.git
+git clone https://github.com/yben-cha/libft.git
 cd libft
